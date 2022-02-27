@@ -10,6 +10,7 @@ import NoMatch from './components/NoMatch';
 import AuthProvider from './AuthProvider';
 import ProtectedRoutes from './ProtectedRoutes';
 import About from './components/About';
+import KeepNotes from './components/KeepNotes';
 
 const AuthContext = React.createContext();
 function App() {
@@ -20,7 +21,6 @@ function App() {
         <Navigation />{/* <-- acts like a middleware */}
         <Routes>
           <Route index exact path="/" element={<Home />} />
-
           <Route path="/dashboard" element={
             <ProtectedRoutes >
               <Dashboard />
@@ -35,6 +35,11 @@ function App() {
           <Route path="/about" element={
             <ProtectedRoutes >
               <About />
+            </ProtectedRoutes>}
+          />
+          <Route path="/notes" element={
+            <ProtectedRoutes >
+              <KeepNotes />
             </ProtectedRoutes>}
           />
           <Route path="*" element={<NoMatch />} />
