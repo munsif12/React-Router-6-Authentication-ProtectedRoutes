@@ -2,16 +2,9 @@ import React, { useState } from 'react'
 import Note from './Note'
 function KeepNotes() {
 
-    const [setrender] = useState(true)
+    // eslint-disable-next-line no-unused-vars
+    const [render, setrender] = useState(true)
     const [newNotes, setnewNotes] = useState([{ id: 1, note: "1" }, { id: 1, note: "2" }])
-
-    let sort = (b) => {
-
-        const sortedArray = b.map((v, i) => {
-            return { ...v, id: i }
-        })
-        return sortedArray
-    }
     const del = (i) => {
         const b = newNotes.filter((val, ind) => {
             return ind !== i
