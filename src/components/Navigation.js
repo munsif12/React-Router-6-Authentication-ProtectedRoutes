@@ -13,6 +13,7 @@ function Navigation() {
                 Token ? (
                     <>
                         <NavLink style={{ padding: "8px" }} to="/profile">Profile</NavLink>
+                        <NavLink style={{ padding: "8px" }} to="/notes">Notes</NavLink>
                         <button style={{ padding: "8px" }} type="button" onClick={onLogout}>
                             Sign Out
                         </button>
