@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Note from './Note'
 function KeepNotes() {
 
-    const [render, setrender] = useState(true)
+    const [setrender] = useState(true)
     const [newNotes, setnewNotes] = useState([{ id: 1, note: "1" }, { id: 1, note: "2" }])
 
     let sort = (b) => {
